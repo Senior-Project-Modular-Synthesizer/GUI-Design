@@ -1,9 +1,9 @@
 /**
- * @file ui.h
+ * @file home_gen.h
  */
 
-#ifndef UI_H
-#define UI_H
+#ifndef HOME_H
+#define HOME_H
 
 #ifdef __cplusplus
 extern "C" {
@@ -12,14 +12,11 @@ extern "C" {
 /*********************
  *      INCLUDES
  *********************/
-
-/* Include all the UI libraries */
 #ifdef LV_LVGL_H_INCLUDE_SIMPLE
     #include "lvgl.h"
 #else
     #include "lvgl/lvgl.h"
 #endif
-#include "Project.h"
 
 /*********************
  *      DEFINES
@@ -30,17 +27,13 @@ extern "C" {
  **********************/
 
 /**********************
- * GLOBAL VARIABLES
- **********************/
-
-/**********************
  * GLOBAL PROTOTYPES
  **********************/
 
-/**
- * Initialize all the custom component libraries (not calling `lv_init()`)
- */
-void ui_init(const char * asset_path);
+
+
+
+lv_obj_t * home_create(void);
 
 /**********************
  *      MACROS
@@ -50,4 +43,4 @@ void ui_init(const char * asset_path);
 } /*extern "C"*/
 #endif
 
-#endif /*UI_H*/
+#endif /*HOME_H*/

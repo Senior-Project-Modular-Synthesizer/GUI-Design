@@ -1,18 +1,11 @@
 /**
- * @file examples.h
+ * @file Project.c
  */
-
-#ifndef EXAMPLES_H
-#define EXAMPLES_H
-
-#ifdef __cplusplus
-extern "C" {
-#endif
 
 /*********************
  *      INCLUDES
  *********************/
-#include "examples_gen.h"
+#include "Project.h"
 
 /*********************
  *      DEFINES
@@ -23,24 +16,26 @@ extern "C" {
  **********************/
 
 /**********************
- * GLOBAL VARIABLES
+ *  STATIC PROTOTYPES
  **********************/
 
 /**********************
- * GLOBAL PROTOTYPES
+ *  STATIC VARIABLES
  **********************/
-
-/**
- * Initialize the component library
- */
-void examples_init(const char * asset_path);
 
 /**********************
  *      MACROS
  **********************/
 
-#ifdef __cplusplus
-} /*extern "C"*/
-#endif
+/**********************
+ *   GLOBAL FUNCTIONS
+ **********************/
 
-#endif /*EXAMPLES_H*/
+void Project_init(const char * asset_path)
+{
+    Project_init_gen(asset_path);
+}
+
+/**********************
+ *   STATIC FUNCTIONS
+ **********************/

@@ -11,10 +11,12 @@ list(
   ${CMAKE_CURRENT_LIST_DIR}/components/subtitle/subtitle_gen.c
   ${CMAKE_CURRENT_LIST_DIR}/components/title/title_gen.c
   ${CMAKE_CURRENT_LIST_DIR}/screens/about/about_gen.c
+  ${CMAKE_CURRENT_LIST_DIR}/screens/effect/effect_gen.c
+  ${CMAKE_CURRENT_LIST_DIR}/screens/home/home_gen.c
   ${CMAKE_CURRENT_LIST_DIR}/screens/settings/settings_gen.c
-  ${CMAKE_CURRENT_LIST_DIR}/examples_gen.c
+  ${CMAKE_CURRENT_LIST_DIR}/Project_gen.c
   ${CMAKE_CURRENT_LIST_DIR}/ui.c
-  ${CMAKE_CURRENT_LIST_DIR}/examples.c
+  ${CMAKE_CURRENT_LIST_DIR}/Project.c
   ${CMAKE_CURRENT_LIST_DIR}/fonts/Inter_SemiBold_ttf_data.c
   ${CMAKE_CURRENT_LIST_DIR}/fonts/Inter_SemiBold_ttf_data.c
   ${CMAKE_CURRENT_LIST_DIR}/images/img_wifi_data.c

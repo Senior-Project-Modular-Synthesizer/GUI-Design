@@ -1,11 +1,11 @@
 /**
- * @file examples_gen.c
+ * @file Project_gen.c
  */
 
 /*********************
  *      INCLUDES
  *********************/
-#include "examples_gen.h"
+#include "Project_gen.h"
 
 #if LV_USE_XML
 #endif
@@ -45,6 +45,7 @@ static const char * translation_texts[] = {
 /*--------------------
  *  Permanent screens
  *-------------------*/
+lv_obj_t * home;
 lv_obj_t * settings;
 
 /*----------------
@@ -89,7 +90,7 @@ lv_subject_t min_edited;
  *   GLOBAL FUNCTIONS
  **********************/
 
-void examples_init_gen(const char * asset_path)
+void Project_init_gen(const char * asset_path)
 {
     char buf[256];
 
@@ -170,6 +171,7 @@ void examples_init_gen(const char * asset_path)
     /*If XML is enabled it's assumed that the permanent screens are created
      *manaully from XML using lv_xml_create()*/
 
+    home = home_create();
     settings = settings_create();
 #endif
 }

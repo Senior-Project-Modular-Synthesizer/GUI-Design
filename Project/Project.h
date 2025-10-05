@@ -1,9 +1,9 @@
 /**
- * @file ui.h
+ * @file Project.h
  */
 
-#ifndef UI_H
-#define UI_H
+#ifndef PROJECT_H
+#define PROJECT_H
 
 #ifdef __cplusplus
 extern "C" {
@@ -12,14 +12,7 @@ extern "C" {
 /*********************
  *      INCLUDES
  *********************/
-
-/* Include all the UI libraries */
-#ifdef LV_LVGL_H_INCLUDE_SIMPLE
-    #include "lvgl.h"
-#else
-    #include "lvgl/lvgl.h"
-#endif
-#include "Project.h"
+#include "Project_gen.h"
 
 /*********************
  *      DEFINES
@@ -28,6 +21,8 @@ extern "C" {
 /**********************
  *      TYPEDEFS
  **********************/
+
+
 
 /**********************
  * GLOBAL VARIABLES
@@ -38,9 +33,9 @@ extern "C" {
  **********************/
 
 /**
- * Initialize all the custom component libraries (not calling `lv_init()`)
+ * Initialize the component library
  */
-void ui_init(const char * asset_path);
+void Project_init(const char * asset_path);
 
 /**********************
  *      MACROS
@@ -50,4 +45,4 @@ void ui_init(const char * asset_path);
 } /*extern "C"*/
 #endif
 
-#endif /*UI_H*/
+#endif /*PROJECT_H*/

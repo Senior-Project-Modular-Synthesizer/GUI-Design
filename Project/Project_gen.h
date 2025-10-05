@@ -1,9 +1,9 @@
 /**
- * @file examples_gen.h
+ * @file Project_gen.h
  */
 
-#ifndef EXAMPLES_GEN_H
-#define EXAMPLES_GEN_H
+#ifndef PROJECT_GEN_H
+#define PROJECT_GEN_H
 
 #ifndef UI_SUBJECT_STRING_LENGTH
 #define UI_SUBJECT_STRING_LENGTH 256
@@ -42,6 +42,7 @@ extern "C" {
 /*-------------------
  * Permanent screens
  *------------------*/
+extern lv_obj_t * home;
 extern lv_obj_t * settings;
 
 /*----------------
@@ -87,7 +88,7 @@ void about_click_event_cb(lv_event_t * e);
  * Initialize the component library
  */
 
-void examples_init_gen(const char * asset_path);
+void Project_init_gen(const char * asset_path);
 
 /**********************
  *      MACROS
@@ -108,10 +109,12 @@ void examples_init_gen(const char * asset_path);
 #include "components/subtitle/subtitle_gen.h"
 #include "components/title/title_gen.h"
 #include "screens/about/about_gen.h"
+#include "screens/effect/effect_gen.h"
+#include "screens/home/home_gen.h"
 #include "screens/settings/settings_gen.h"
 
 #ifdef __cplusplus
 } /*extern "C"*/
 #endif
 
-#endif /*EXAMPLES_GEN_H*/
+#endif /*PROJECT_GEN_H*/
