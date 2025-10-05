@@ -4,15 +4,16 @@
                 style_flex_cross_place="center" 
                 style_flex_track_place="center"
                 style_flex_main_place="space_evenly">
-            <lv_button style_text_font="font_subtitle">
-                <lv_label text-translated="back"/>
-                <screen_load_event screen="settings"/> 
-            </lv_button>
+
             <lv_label width="100%" style_text_align="center" 
                       text-translated="info"/>
-            <row style_bg_color="0xebebeb" style_bg_opa="255" style_pad_top="10"  width="100%">
-                <lv_arc height="100" ></lv_arc>
-                <lv_arc height="100" s></lv_arc>
+            <row scrollable="false" style_bg_color="0xebebeb" style_bg_opa="255" style_pad_top="10" width="100%" height="100">
+                <arc ></arc>
+                <lv_button style_align="bottom_mid" style_text_font="font_subtitle">
+                    <lv_label text-translated="back"/>
+                    <screen_load_event screen="settings"/> 
+                </lv_button>
+                <arc ></arc>
             </row>
 
         </column>
