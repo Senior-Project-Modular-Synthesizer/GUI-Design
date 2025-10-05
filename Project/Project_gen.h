@@ -74,6 +74,10 @@ extern lv_subject_t wifi_on;
 extern lv_subject_t notification_on;
 extern lv_subject_t hour_edited;
 extern lv_subject_t min_edited;
+extern lv_subject_t arc1;
+extern lv_subject_t arc2;
+extern lv_subject_t slide;
+extern lv_subject_t check;
 
 /**********************
  * GLOBAL PROTOTYPES
@@ -82,6 +86,7 @@ extern lv_subject_t min_edited;
 /*----------------
  * Event Callbacks
  *----------------*/
+void arc_changed(lv_event_t * e);
 void about_click_event_cb(lv_event_t * e);
 
 /**
@@ -99,6 +104,7 @@ void Project_init_gen(const char * asset_path);
  **********************/
 
 /*Include all the widget and components of this library*/
+#include "components/arc/arc_gen.h"
 #include "components/checkbox/checkbox_gen.h"
 #include "components/column/column_gen.h"
 #include "components/header/header_gen.h"

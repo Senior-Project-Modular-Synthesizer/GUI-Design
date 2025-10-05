@@ -81,6 +81,10 @@ lv_subject_t wifi_on;
 lv_subject_t notification_on;
 lv_subject_t hour_edited;
 lv_subject_t min_edited;
+lv_subject_t arc1;
+lv_subject_t arc2;
+lv_subject_t slide;
+lv_subject_t check;
 
 /**********************
  *      MACROS
@@ -125,6 +129,10 @@ void Project_init_gen(const char * asset_path)
     lv_subject_init_int(&notification_on, 0);
     lv_subject_init_int(&hour_edited, 0);
     lv_subject_init_int(&min_edited, 0);
+    lv_subject_init_int(&arc1, 50);
+    lv_subject_init_int(&arc2, 50);
+    lv_subject_init_int(&slide, 50);
+    lv_subject_init_int(&check, 0);
 
     /*----------------
      * Translations
@@ -148,8 +156,13 @@ void Project_init_gen(const char * asset_path)
     lv_xml_register_subject(NULL, "notification_on", &notification_on);
     lv_xml_register_subject(NULL, "hour_edited", &hour_edited);
     lv_xml_register_subject(NULL, "min_edited", &min_edited);
+    lv_xml_register_subject(NULL, "arc1", &arc1);
+    lv_xml_register_subject(NULL, "arc2", &arc2);
+    lv_xml_register_subject(NULL, "slide", &slide);
+    lv_xml_register_subject(NULL, "check", &check);
 
     /* Register callbacks */
+    lv_xml_register_event_cb(NULL, "arc_changed", arc_changed);
     lv_xml_register_event_cb(NULL, "about_click_event_cb", about_click_event_cb);
 #endif
 
@@ -178,6 +191,11 @@ void Project_init_gen(const char * asset_path)
 
 /* callbacks */
 #if defined(LV_EDITOR_PREVIEW)
+void __attribute__((weak)) arc_changed(lv_event_t * e)
+{
+   LV_UNUSED(e);
+   LV_LOG("arc_changed was called\n");
+}
 void __attribute__((weak)) about_click_event_cb(lv_event_t * e)
 {
    LV_UNUSED(e);

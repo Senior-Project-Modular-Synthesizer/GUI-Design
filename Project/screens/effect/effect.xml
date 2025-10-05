@@ -1,23 +1,20 @@
 <screen>
-   <view>
-        <column height="100%" width="100%">
+   <view style_pad_hor="5" style_pad_top="5" scrollable="false">
+        <title text="Gain" align="top_left"/>
 
-            <title text="Gain"></title>
-
+        <column height="100%" width="100%" y="25">
             <lv_checkbox text="Check" bind_checked="check"></lv_checkbox>
             <lv_slider bind_value="arc1">
                 <lv_label text="asd"></lv_label>
             </lv_slider>
-
         </column>
-        
 
-        <lv_button style_align="bottom_mid" style_text_font="font_subtitle" x="255" y="6">
+        <lv_button style_align="bottom_mid" style_text_font="font_subtitle" align="top_right">
             <lv_label text-translated="back"/>
             <screen_load_event screen="home"/> 
         </lv_button>
-        <arc x="5" y="140" ></arc>
-        <arc variable="arc2" x="215" y="140"></arc>
+        <arc align="bottom_left" ></arc>
+        <arc variable="arc2" align="bottom_right"></arc>
         
    </view>
 </screen>

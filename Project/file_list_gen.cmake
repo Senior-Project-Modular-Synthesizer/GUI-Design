@@ -1,6 +1,7 @@
 list(
   APPEND
   PROJECT_SOURCES
+  ${CMAKE_CURRENT_LIST_DIR}/components/arc/arc_gen.c
   ${CMAKE_CURRENT_LIST_DIR}/components/checkbox/checkbox_gen.c
   ${CMAKE_CURRENT_LIST_DIR}/components/column/column_gen.c
   ${CMAKE_CURRENT_LIST_DIR}/components/header/header_gen.c
