@@ -1,10 +1,12 @@
 <screen permanent="true">
     <styles>
-        <style name="main" pad_all="0" border_width="0" radius="0" 
-        layout="flex" flex_flow="column" pad_row="0" 
-        text_font="font_subtitle"/>
+        <style name="cell" border_side="full"/>
     </styles>
 
-    <view extends="lv_table" column_count="5" row_count="2" style_bg_color="0x334" style_text_color="0xeee"></view>
+    <view>
+        <lv_table column_count="2" row_count="2" style_border_side="full">
+            <lv_table-cell column="0" row="0" value="0"/>
+        </lv_table>
+    </view>
 
 </screen>

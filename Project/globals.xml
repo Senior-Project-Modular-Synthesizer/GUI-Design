@@ -22,5 +22,7 @@
         <int name="min_edited" value="0"/>
         <int name="arc1" value="50"/>
         <int name="arc2" value="50"/>
+        <int name="slide" value="50"/>
+        <int name="check" value="0"/>
     </subjects>
 </globals>

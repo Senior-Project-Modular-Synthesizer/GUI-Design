@@ -9,9 +9,8 @@
     </previews>
 
     <view extends="lv_arc" bind_value="$variable" width="100" height="100">
-        <!-- <column align="center" style_pad_bottom="40"> -->
-            <lv_label align="center" text-translated="$title" style_pad_bottom="10"></lv_label>
-            <lv_label align="center" bind_text="$variable" style_pad_top="20"></lv_label>
-        <!-- </column> -->
+        <event_cb callback="arc_changed" trigger="value_changed"/>
+        <lv_label align="center" text-translated="$title" style_pad_bottom="10"></lv_label>
+        <lv_label align="center" bind_text="$variable" style_pad_top="20"></lv_label>
     </view>
 </component>
