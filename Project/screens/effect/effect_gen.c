@@ -62,12 +62,7 @@ lv_obj_t * effect_create(void)
     lv_obj_bind_checked(lv_checkbox_0, &check);
 
 
-    lv_obj_t * lv_slider_0 = lv_slider_create(column_0);
-    lv_slider_bind_value(lv_slider_0, &arc1);
-
-    lv_obj_t * lv_label_0 = lv_label_create(lv_slider_0);
-    lv_label_set_text(lv_label_0, "asd");
-
+    lv_obj_t * effectslider_0 = effectslider_create(column_0, "GAIN", &arc1);
 
 
 
@@ -76,8 +71,8 @@ lv_obj_t * effect_create(void)
     lv_obj_set_style_text_font(lv_button_0, font_subtitle, 0);
     lv_obj_set_align(lv_button_0, LV_ALIGN_TOP_RIGHT);
 
-    lv_obj_t * lv_label_1 = lv_label_create(lv_button_0);
-    lv_label_set_text(lv_label_1, lv_tr("back"));
+    lv_obj_t * lv_label_0 = lv_label_create(lv_button_0);
+    lv_label_set_text(lv_label_0, "back");
 
     lv_obj_add_screen_load_event(lv_button_0, LV_EVENT_CLICKED, home, LV_SCREEN_LOAD_ANIM_NONE, 0, 0);
 

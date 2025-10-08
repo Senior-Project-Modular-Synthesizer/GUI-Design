@@ -107,6 +107,7 @@ void Project_init_gen(const char * asset_path);
 #include "components/arc/arc_gen.h"
 #include "components/checkbox/checkbox_gen.h"
 #include "components/column/column_gen.h"
+#include "components/effectslider/effectslider_gen.h"
 #include "components/header/header_gen.h"
 #include "components/icon/icon_gen.h"
 #include "components/row/row_gen.h"
