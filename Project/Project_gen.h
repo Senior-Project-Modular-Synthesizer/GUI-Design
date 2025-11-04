@@ -87,6 +87,7 @@ extern lv_subject_t check;
  * Event Callbacks
  *----------------*/
 void arc_changed(lv_event_t * e);
+void slider_changed(lv_event_t * e);
 void about_click_event_cb(lv_event_t * e);
 
 /**
@@ -108,6 +109,7 @@ void Project_init_gen(const char * asset_path);
 #include "components/checkbox/checkbox_gen.h"
 #include "components/column/column_gen.h"
 #include "components/effectslider/effectslider_gen.h"
+#include "components/grid/grid_gen.h"
 #include "components/header/header_gen.h"
 #include "components/icon/icon_gen.h"
 #include "components/row/row_gen.h"
