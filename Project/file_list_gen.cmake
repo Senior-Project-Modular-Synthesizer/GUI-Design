@@ -5,6 +5,7 @@ list(
   ${CMAKE_CURRENT_LIST_DIR}/components/checkbox/checkbox_gen.c
   ${CMAKE_CURRENT_LIST_DIR}/components/column/column_gen.c
   ${CMAKE_CURRENT_LIST_DIR}/components/effectslider/effectslider_gen.c
+  ${CMAKE_CURRENT_LIST_DIR}/components/grid/grid_gen.c
   ${CMAKE_CURRENT_LIST_DIR}/components/header/header_gen.c
   ${CMAKE_CURRENT_LIST_DIR}/components/icon/icon_gen.c
   ${CMAKE_CURRENT_LIST_DIR}/components/row/row_gen.c
