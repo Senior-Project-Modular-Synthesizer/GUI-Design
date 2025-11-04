@@ -50,7 +50,8 @@ lv_obj_t * arc_create(lv_obj_t * parent, const char * title, lv_subject_t * vari
 
     lv_obj_t * lv_label_1 = lv_label_create(lv_arc_0);
     lv_obj_set_align(lv_label_1, LV_ALIGN_CENTER);
-    lv_label_bind_text(lv_label_1, variable, NULL);lv_obj_set_style_pad_top(lv_label_1, 20, 0);
+    lv_label_set_text(lv_label_1, variable);
+    lv_obj_set_style_pad_top(lv_label_1, 20, 0);
 
 
 

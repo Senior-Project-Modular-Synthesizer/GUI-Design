@@ -3,7 +3,7 @@
         <title text="Gain" align="top_left"/>
 
         <column height="100%" width="100%" y="25">
-            <checkbox text="Check" subject="check"></checkbox>
+            <checkbox text="Check" subject="check"/> 
             <lv_slider bind_value="arc1">
                 <event_cb callback="slider_changed" trigger="value_changed"/>
             </lv_slider>
