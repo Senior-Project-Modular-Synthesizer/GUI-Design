@@ -10,8 +10,10 @@
             <lv_label text="asd"></lv_label>
         </column>
 
+
+
         <lv_button style_align="bottom_mid" style_text_font="font_subtitle" align="top_right">
-            <lv_label text-translated="back"/>
+            <lv_label text="back"/>
             <screen_load_event screen="home"/> 
         </lv_button>
         <arc align="bottom_left" ></arc>
