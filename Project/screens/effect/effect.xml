@@ -3,14 +3,15 @@
         <title text="Gain" align="top_left"/>
 
         <column height="100%" width="100%" y="25">
-            <lv_checkbox text="Check" bind_checked="check"></lv_checkbox>
-            <effectslider />
+            <checkbox text="Check" subject="check"></checkbox>
+            <lv_slider bind_value="arc1">
+                <event_cb callback="slider_changed" trigger="value_changed"/>
+            </lv_slider>
+            <lv_label text="asd"></lv_label>
         </column>
 
-
-
         <lv_button style_align="bottom_mid" style_text_font="font_subtitle" align="top_right">
-            <lv_label text="back"/>
+            <lv_label text-translated="back"/>
             <screen_load_event screen="home"/> 
         </lv_button>
         <arc align="bottom_left" ></arc>
