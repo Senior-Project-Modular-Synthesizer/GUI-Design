@@ -1,9 +1,9 @@
 /**
- * @file about_gen.h
+ * @file grid_gen.h
  */
 
-#ifndef ABOUT_H
-#define ABOUT_H
+#ifndef GRID_H
+#define GRID_H
 
 #ifdef __cplusplus
 extern "C" {
@@ -31,9 +31,7 @@ extern "C" {
  **********************/
 
 
-
-
-lv_obj_t * about_create(void);
+lv_obj_t * grid_create(lv_obj_t * parent);
 
 /**********************
  *      MACROS
@@ -43,4 +41,4 @@ lv_obj_t * about_create(void);
 } /*extern "C"*/
 #endif
 
-#endif /*ABOUT_H*/
+#endif /*GRID_H*/

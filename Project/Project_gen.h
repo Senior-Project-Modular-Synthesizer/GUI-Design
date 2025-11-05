@@ -43,7 +43,6 @@ extern "C" {
  * Permanent screens
  *------------------*/
 extern lv_obj_t * home;
-extern lv_obj_t * settings;
 
 /*----------------
  * Global styles
@@ -87,7 +86,6 @@ extern lv_subject_t check;
  * Event Callbacks
  *----------------*/
 void arc_changed(lv_event_t * e);
-void about_click_event_cb(lv_event_t * e);
 
 /**
  * Initialize the component library
@@ -108,17 +106,14 @@ void Project_init_gen(const char * asset_path);
 #include "components/checkbox/checkbox_gen.h"
 #include "components/column/column_gen.h"
 #include "components/effectslider/effectslider_gen.h"
+#include "components/grid/grid_gen.h"
 #include "components/header/header_gen.h"
 #include "components/icon/icon_gen.h"
 #include "components/row/row_gen.h"
-#include "components/setclock/setclock_gen.h"
-#include "components/step_button/step_button_gen.h"
 #include "components/subtitle/subtitle_gen.h"
 #include "components/title/title_gen.h"
-#include "screens/about/about_gen.h"
 #include "screens/effect/effect_gen.h"
 #include "screens/home/home_gen.h"
-#include "screens/settings/settings_gen.h"
 
 #ifdef __cplusplus
 } /*extern "C"*/
