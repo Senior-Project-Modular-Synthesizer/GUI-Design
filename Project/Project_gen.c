@@ -163,7 +163,6 @@ void Project_init_gen(const char * asset_path)
     /* Register callbacks */
     lv_xml_register_event_cb(NULL, "arc_changed", arc_changed);
     lv_xml_register_event_cb(NULL, "slider_changed", slider_changed);
-    lv_xml_register_event_cb(NULL, "about_click_event_cb", about_click_event_cb);
 #endif
 
     /* Register all the global assets so that they won't be created again when globals.xml is parsed.
@@ -199,11 +198,6 @@ void __attribute__((weak)) slider_changed(lv_event_t * e)
 {
    LV_UNUSED(e);
    LV_LOG("slider_changed was called\n");
-}
-void __attribute__((weak)) about_click_event_cb(lv_event_t * e)
-{
-   LV_UNUSED(e);
-   LV_LOG("about_click_event_cb was called\n");
 }
 #endif
 
