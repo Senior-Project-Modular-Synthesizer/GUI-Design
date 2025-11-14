@@ -31,7 +31,7 @@ extern "C" {
  **********************/
 
 
-lv_obj_t * arc_create(lv_obj_t * parent, const char * title, int32_t variable);
+lv_obj_t * arc_create(lv_obj_t * parent, const char * title, lv_subject_t * variable);
 
 /**********************
  *      MACROS
