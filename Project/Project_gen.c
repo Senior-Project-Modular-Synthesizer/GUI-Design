@@ -46,7 +46,6 @@ static const char * translation_texts[] = {
  *  Permanent screens
  *-------------------*/
 lv_obj_t * home;
-lv_obj_t * settings;
 
 /*----------------
  * Global styles
@@ -186,7 +185,6 @@ void Project_init_gen(const char * asset_path)
      *manaully from XML using lv_xml_create()*/
 
     home = home_create();
-    settings = settings_create();
 #endif
 }
 
