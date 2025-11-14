@@ -76,7 +76,7 @@ lv_obj_t * effect_create(void)
     lv_obj_set_align(lv_button_0, LV_ALIGN_TOP_RIGHT);
 
     lv_obj_t * lv_label_1 = lv_label_create(lv_button_0);
-    lv_label_set_text(lv_label_1, "back");
+    lv_label_set_text(lv_label_1, lv_tr("back"));
 
     lv_obj_add_screen_load_event(lv_button_0, LV_EVENT_CLICKED, home, LV_SCREEN_LOAD_ANIM_NONE, 0, 0);
 
