@@ -86,6 +86,8 @@ extern lv_subject_t check;
  * Event Callbacks
  *----------------*/
 void arc_changed(lv_event_t * e);
+void slider_changed(lv_event_t * e);
+void about_click_event_cb(lv_event_t * e);
 
 /**
  * Initialize the component library
