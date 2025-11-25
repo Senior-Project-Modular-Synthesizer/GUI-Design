@@ -9,7 +9,7 @@
     </previews>
 
     <styles>
-        <style name="main" 
+        <style name="slider" 
             bg_opa="0" border_width="0"
             width="content" height="60"
             flex_flow="column"
@@ -17,7 +17,7 @@
     </styles>
 
     <view scrollable="false">
-        <style name="main"/>
+        <style name="slider"/>
         <lv_label align="center" text="$title" style_pad_bottom="0" x="0" y="-23"></lv_label>
         <lv_slider bind_value="$variable" x="0" y="10" width="150">
             <event_cb callback="arc_changed" trigger="value_changed"/>

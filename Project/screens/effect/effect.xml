@@ -1,7 +1,7 @@
 <screen>
    <view style_pad_hor="5" style_pad_top="5" scrollable="false">
         <title text="Gain" align="top_left"/>
-
+        
         <column height="100%" width="100%" y="25">
             <checkbox text="Check" subject="check"/> 
             <lv_label text="Sample slider"></lv_label>
@@ -11,7 +11,7 @@
         </column>
 
         <lv_button style_align="bottom_mid" style_text_font="font_subtitle" align="top_right">
-            <lv_label text-translated="back"/>
+            <lv_label text="Back"/>
             <screen_load_event screen="home"/> 
         </lv_button>
         <arc align="bottom_left" ></arc>

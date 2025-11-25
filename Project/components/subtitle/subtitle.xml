@@ -3,9 +3,9 @@
         <prop name="text" type="string" default="settings"></prop>
     </api>
     <styles>
-        <style name="main" text_font="font_subtitle"/>
+        <style name="subtitle" text_font="font_subtitle"/>
     </styles>
     <view extends="lv_label" text="$text">
-        <style name="main" />
+        <style name="subtitle" />
     </view>
 </component>

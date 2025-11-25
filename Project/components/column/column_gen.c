@@ -1,13 +1,14 @@
 /**
  * @file column_gen.c
- * @description Template source file for LVGL objects
+ * @brief Template source file for LVGL objects
  */
 
 /*********************
  *      INCLUDES
  *********************/
+
 #include "column_gen.h"
-#include "ui.h"
+#include "c_repos_GUI_Design_Project.h"
 
 /*********************
  *      DEFINES
@@ -35,31 +36,30 @@ lv_obj_t * column_create(lv_obj_t * parent)
 {
     LV_TRACE_OBJ_CREATE("begin");
 
-    static lv_style_t main;
+    static lv_style_t column;
 
     static bool style_inited = false;
 
     if (!style_inited) {
-        lv_style_init(&main);
-        lv_style_set_bg_opa(&main, 0);
-        lv_style_set_border_width(&main, 0);
-        lv_style_set_pad_row(&main, SPACE_MD);
-        lv_style_set_width(&main, LV_SIZE_CONTENT);
-        lv_style_set_height(&main, LV_SIZE_CONTENT);
-        lv_style_set_layout(&main, LV_LAYOUT_FLEX);
-        lv_style_set_flex_flow(&main, LV_FLEX_FLOW_COLUMN);
-        lv_style_set_radius(&main, 0);
+        lv_style_init(&column);
+        lv_style_set_bg_opa(&column, 0);
+        lv_style_set_border_width(&column, 0);
+        lv_style_set_pad_row(&column, SPACE_MD);
+        lv_style_set_width(&column, LV_SIZE_CONTENT);
+        lv_style_set_height(&column, LV_SIZE_CONTENT);
+        lv_style_set_layout(&column, LV_LAYOUT_FLEX);
+        lv_style_set_flex_flow(&column, LV_FLEX_FLOW_COLUMN);
+        lv_style_set_radius(&column, 0);
 
         style_inited = true;
     }
 
     lv_obj_t * lv_obj_0 = lv_obj_create(parent);
-    lv_obj_add_style(lv_obj_0, &main, 0);
+    lv_obj_set_name_static(lv_obj_0, "column_#");
 
+    lv_obj_add_style(lv_obj_0, &column, 0);
 
     LV_TRACE_OBJ_CREATE("finished");
-
-    lv_obj_set_name(lv_obj_0, "column_#");
 
     return lv_obj_0;
 }
@@ -67,3 +67,4 @@ lv_obj_t * column_create(lv_obj_t * parent)
 /**********************
  *   STATIC FUNCTIONS
  **********************/
+

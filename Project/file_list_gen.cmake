@@ -13,11 +13,7 @@ list(
   ${CMAKE_CURRENT_LIST_DIR}/components/title/title_gen.c
   ${CMAKE_CURRENT_LIST_DIR}/screens/effect/effect_gen.c
   ${CMAKE_CURRENT_LIST_DIR}/screens/home/home_gen.c
-  ${CMAKE_CURRENT_LIST_DIR}/Project_gen.c
-  ${CMAKE_CURRENT_LIST_DIR}/ui.c
-  ${CMAKE_CURRENT_LIST_DIR}/Project.c
+  ${CMAKE_CURRENT_LIST_DIR}/c_repos_GUI_Design_Project_gen.c
+  ${CMAKE_CURRENT_LIST_DIR}/c_repos_GUI_Design_Project.c
   ${CMAKE_CURRENT_LIST_DIR}/fonts/Inter_SemiBold_ttf_data.c
-  ${CMAKE_CURRENT_LIST_DIR}/fonts/Inter_SemiBold_ttf_data.c
-  ${CMAKE_CURRENT_LIST_DIR}/images/img_wifi_data.c
-  ${CMAKE_CURRENT_LIST_DIR}/images/img_bluetooth_data.c
-  ${CMAKE_CURRENT_LIST_DIR}/images/img_bell_data.c)
+  ${CMAKE_CURRENT_LIST_DIR}/fonts/Inter_SemiBold_ttf_data.c)

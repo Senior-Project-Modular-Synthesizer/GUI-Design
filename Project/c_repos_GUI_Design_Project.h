@@ -1,9 +1,9 @@
 /**
- * @file title_gen.h
+ * @file c_repos_GUI_Design_Project.h
  */
 
-#ifndef TITLE_H
-#define TITLE_H
+#ifndef C_REPOS_GUI_DESIGN_PROJECT_H
+#define C_REPOS_GUI_DESIGN_PROJECT_H
 
 #ifdef __cplusplus
 extern "C" {
@@ -13,11 +13,7 @@ extern "C" {
  *      INCLUDES
  *********************/
 
-#ifdef LV_LVGL_H_INCLUDE_SIMPLE
-    #include "lvgl.h"
-#else
-    #include "lvgl/lvgl.h"
-#endif
+#include "c_repos_GUI_Design_Project_gen.h"
 
 /*********************
  *      DEFINES
@@ -28,10 +24,17 @@ extern "C" {
  **********************/
 
 /**********************
+ * GLOBAL VARIABLES
+ **********************/
+
+/**********************
  * GLOBAL PROTOTYPES
  **********************/
 
-lv_obj_t * title_create(lv_obj_t * parent, const char * text);
+/**
+ * Initialize the component library
+ */
+void c_repos_GUI_Design_Project_init(const char * asset_path);
 
 /**********************
  *      MACROS
@@ -41,4 +44,4 @@ lv_obj_t * title_create(lv_obj_t * parent, const char * text);
 } /*extern "C"*/
 #endif
 
-#endif /*TITLE_H*/
+#endif /*C_REPOS_GUI_DESIGN_PROJECT_H*/

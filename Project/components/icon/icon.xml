@@ -8,13 +8,13 @@
     </consts>
     
     <styles>
-        <style name="main" width="#size" height="#size" image_recolor="0xffffff"
+        <style name="icon" width="#size" height="#size" image_recolor="0xffffff"
         image_recolor_opa="255"/>
         <style name="off" image_opa="128"/>
     </styles>
     
     <view extends="lv_image" src="img_bell" inner_align="stretch">
-        <style name="main" />
+        <style name="icon" />
         <style name="off" selector="disabled" />
     </view> 
 </component>

@@ -1,14 +1,15 @@
 /**
- * @file Project_gen.c
+ * @file c_repos_GUI_Design_Project_gen.c
  */
 
 /*********************
  *      INCLUDES
  *********************/
-#include "Project_gen.h"
+
+#include "c_repos_GUI_Design_Project_gen.h"
 
 #if LV_USE_XML
-#endif
+#endif /* LV_USE_XML */
 
 /*********************
  *      DEFINES
@@ -29,14 +30,17 @@
 /*----------------
  * Translations
  *----------------*/
-static const char * translation_languages[] = {"en", "de", NULL};
-static const char * translation_tags[] = {"settings", "about", "back", "info", NULL};
-static const char * translation_texts[] = {
-    "Settings", "Einstellungen", /* settings */
-    "About", "Über", /* about */
-    "Back", "Zurück", /* back */
-    "This UI was created with LVGL's UI Editor", "Diese Benutzeroberfläche wurde mit dem UI-Editor von LVGL erstellt.", /* info */
-};
+
+#ifndef LV_EDITOR_PREVIEW
+    static const char * translation_languages[] = {"en", "de", NULL};
+    static const char * translation_tags[] = {"settings", "about", "back", "info", NULL};
+    static const char * translation_texts[] = {
+        "Settings", "Einstellungen", /* settings */
+        "About", "Über", /* about */
+        "Back", "Zurück", /* back */
+        "This UI was created with LVGL's UI Editor", "Diese Benutzeroberfläche wurde mit dem UI-Editor von LVGL erstellt.", /* info */
+    };
+#endif
 
 /**********************
  *  GLOBAL VARIABLES
@@ -45,7 +49,8 @@ static const char * translation_texts[] = {
 /*--------------------
  *  Permanent screens
  *-------------------*/
-lv_obj_t * home;
+
+lv_obj_t * home = NULL;
 
 /*----------------
  * Global styles
@@ -54,6 +59,7 @@ lv_obj_t * home;
 /*----------------
  * Fonts
  *----------------*/
+
 lv_font_t * font_title;
 extern uint8_t Inter_SemiBold_ttf_data[];
 extern size_t Inter_SemiBold_ttf_data_size;
@@ -62,16 +68,11 @@ lv_font_t * font_subtitle;
 /*----------------
  * Images
  *----------------*/
-const void * img_wifi;
-extern const void * img_wifi_data;
-const void * img_bluetooth;
-extern const void * img_bluetooth_data;
-const void * img_bell;
-extern const void * img_bell_data;
 
 /*----------------
  * Subjects
  *----------------*/
+
 lv_subject_t hours;
 lv_subject_t mins;
 lv_subject_t age;
@@ -93,7 +94,7 @@ lv_subject_t check;
  *   GLOBAL FUNCTIONS
  **********************/
 
-void Project_init_gen(const char * asset_path)
+void c_repos_GUI_Design_Project_init_gen(const char * asset_path)
 {
     char buf[256];
 
@@ -104,19 +105,16 @@ void Project_init_gen(const char * asset_path)
     /*----------------
      * Fonts
      *----------------*/
+
     /* create tiny ttf font 'font_title' from C array */
     font_title = lv_tiny_ttf_create_data(Inter_SemiBold_ttf_data, Inter_SemiBold_ttf_data_size, 20);
     /* create tiny ttf font 'font_subtitle' from C array */
     font_subtitle = lv_tiny_ttf_create_data(Inter_SemiBold_ttf_data, Inter_SemiBold_ttf_data_size, 14);
 
+
     /*----------------
      * Images
      *----------------*/
-    img_wifi = &img_wifi_data;
-    img_bluetooth = &img_bluetooth_data;
-    img_bell = &img_bell_data;
-
-
     /*----------------
      * Subjects
      *----------------*/
@@ -136,11 +134,13 @@ void Project_init_gen(const char * asset_path)
     /*----------------
      * Translations
      *----------------*/
-    lv_translation_add_static(translation_languages, translation_tags, translation_texts);
 
+    #ifndef LV_EDITOR_PREVIEW
+        lv_translation_add_static(translation_languages, translation_tags, translation_texts);
+    #endif
 
 #if LV_USE_XML
-    /*Register widgets*/
+    /* Register widgets */
 
     /* Register fonts */
     lv_xml_register_font(NULL, "font_title", font_title);
@@ -168,36 +168,33 @@ void Project_init_gen(const char * asset_path)
     /* Register all the global assets so that they won't be created again when globals.xml is parsed.
      * While running in the editor skip this step to update the preview when the XML changes */
 #if LV_USE_XML && !defined(LV_EDITOR_PREVIEW)
-
     /* Register images */
-    lv_xml_register_image(NULL, "img_wifi", img_wifi);
-    lv_xml_register_image(NULL, "img_bluetooth", img_bluetooth);
-    lv_xml_register_image(NULL, "img_bell", img_bell);
 #endif
 
 #if LV_USE_XML == 0
     /*--------------------
-    *  Permanent screens
-    *-------------------*/
+     *  Permanent screens
+     *-------------------*/
+    /* If XML is enabled it's assumed that the permanent screens are created
+     * manaully from XML using lv_xml_create() */
+    /* To allow screens to reference each other, create them all before calling the sceen create functions */
+    home = lv_obj_create(NULL);
 
-    /*If XML is enabled it's assumed that the permanent screens are created
-     *manaully from XML using lv_xml_create()*/
-
-    home = home_create();
+    home_create();
 #endif
 }
 
-/* callbacks */
+/* Callbacks */
 #if defined(LV_EDITOR_PREVIEW)
 void __attribute__((weak)) arc_changed(lv_event_t * e)
 {
-   LV_UNUSED(e);
-   LV_LOG("arc_changed was called\n");
+    LV_UNUSED(e);
+    LV_LOG("arc_changed was called\n");
 }
 void __attribute__((weak)) slider_changed(lv_event_t * e)
 {
-   LV_UNUSED(e);
-   LV_LOG("slider_changed was called\n");
+    LV_UNUSED(e);
+    LV_LOG("slider_changed was called\n");
 }
 #endif
 

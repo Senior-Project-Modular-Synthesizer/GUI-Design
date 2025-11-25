@@ -1,9 +1,9 @@
 /**
- * @file Project_gen.h
+ * @file c_repos_GUI_Design_Project_gen.h
  */
 
-#ifndef PROJECT_GEN_H
-#define PROJECT_GEN_H
+#ifndef C_REPOS_GUI_DESIGN_PROJECT_GEN_H
+#define C_REPOS_GUI_DESIGN_PROJECT_GEN_H
 
 #ifndef UI_SUBJECT_STRING_LENGTH
 #define UI_SUBJECT_STRING_LENGTH 256
@@ -27,13 +27,9 @@ extern "C" {
  *      DEFINES
  *********************/
 
-
-
 /**********************
  *      TYPEDEFS
  **********************/
-
-
 
 /**********************
  * GLOBAL VARIABLES
@@ -42,29 +38,29 @@ extern "C" {
 /*-------------------
  * Permanent screens
  *------------------*/
+
 extern lv_obj_t * home;
 
 /*----------------
  * Global styles
  *----------------*/
 
-
 /*----------------
  * Fonts
  *----------------*/
+
 extern lv_font_t * font_title;
+
 extern lv_font_t * font_subtitle;
 
 /*----------------
  * Images
  *----------------*/
-extern const void * img_wifi;
-extern const void * img_bluetooth;
-extern const void * img_bell;
 
 /*----------------
  * Subjects
  *----------------*/
+
 extern lv_subject_t hours;
 extern lv_subject_t mins;
 extern lv_subject_t age;
@@ -85,6 +81,7 @@ extern lv_subject_t check;
 /*----------------
  * Event Callbacks
  *----------------*/
+
 void arc_changed(lv_event_t * e);
 void slider_changed(lv_event_t * e);
 
@@ -92,7 +89,7 @@ void slider_changed(lv_event_t * e);
  * Initialize the component library
  */
 
-void Project_init_gen(const char * asset_path);
+void c_repos_GUI_Design_Project_init_gen(const char * asset_path);
 
 /**********************
  *      MACROS
@@ -120,4 +117,4 @@ void Project_init_gen(const char * asset_path);
 } /*extern "C"*/
 #endif
 
-#endif /*PROJECT_GEN_H*/
+#endif /*C_REPOS_GUI_DESIGN_PROJECT_GEN_H*/
