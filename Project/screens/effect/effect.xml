@@ -3,11 +3,8 @@
         <title text="Gain" align="top_left"/>
         
         <column height="100%" width="100%" y="25">
-            <checkbox text="Check" subject="check"/> 
-            <lv_label text="Sample slider"></lv_label>
-            <lv_slider bind_value="arc1">
-                <event_cb callback="slider_changed" trigger="value_changed"/>
-            </lv_slider>
+            <checkbox text="Check" subject="check"/>
+            <effectslider title="GAIN" variable="arc1"></effectslider>
         </column>
 
         <lv_button style_align="bottom_mid" style_text_font="font_subtitle" align="top_right">

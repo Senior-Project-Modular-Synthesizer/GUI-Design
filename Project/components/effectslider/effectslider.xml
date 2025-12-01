@@ -5,7 +5,7 @@
     </api>
 
     <previews>
-        <preview width="400" height="200" style_pad_all="30"/>
+        <preview width="400" height="200" style_pad_all="70"/>
     </previews>
 
     <styles>
@@ -18,10 +18,10 @@
 
     <view scrollable="false">
         <style name="slider"/>
-        <lv_label align="center" text="$title" style_pad_bottom="0" x="0" y="-23"></lv_label>
-        <lv_slider bind_value="$variable" x="0" y="10" width="150">
+        <lv_label align="center" text="$title" style_pad_bottom="50"></lv_label>
+        <lv_slider bind_value="$variable" width="200" align="center">
             <event_cb callback="arc_changed" trigger="value_changed"/>
         </lv_slider>
-        <lv_label align="center" bind_text="$variable" style_pad_top="20" x="0" y="13"></lv_label>
+        <lv_label align="center" bind_text="$variable" style_pad_top="45"></lv_label>
     </view>
 </component>

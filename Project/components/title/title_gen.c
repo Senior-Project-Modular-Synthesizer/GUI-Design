@@ -1,18 +1,19 @@
 /**
  * @file title_gen.c
- * @brief Template source file for LVGL objects
+ * @description Template source file for LVGL objects
  */
 
 /*********************
  *      INCLUDES
  *********************/
-
 #include "title_gen.h"
-#include "c_repos_GUI_Design_Project.h"
+#include "ui.h"
 
 /*********************
  *      DEFINES
  *********************/
+
+
 
 /**********************
  *      TYPEDEFS
@@ -46,12 +47,13 @@ lv_obj_t * title_create(lv_obj_t * parent, const char * text)
     }
 
     lv_obj_t * lv_label_0 = lv_label_create(parent);
-    lv_obj_set_name_static(lv_label_0, "title_#");
     lv_label_set_text(lv_label_0, text);
-
     lv_obj_add_style(lv_label_0, &title, 0);
 
+
     LV_TRACE_OBJ_CREATE("finished");
+
+    lv_obj_set_name(lv_label_0, "title_#");
 
     return lv_label_0;
 }
@@ -59,4 +61,3 @@ lv_obj_t * title_create(lv_obj_t * parent, const char * text)
 /**********************
  *   STATIC FUNCTIONS
  **********************/
-

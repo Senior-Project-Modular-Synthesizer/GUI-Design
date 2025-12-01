@@ -1,18 +1,19 @@
 /**
  * @file checkbox_gen.c
- * @brief Template source file for LVGL objects
+ * @description Template source file for LVGL objects
  */
 
 /*********************
  *      INCLUDES
  *********************/
-
 #include "checkbox_gen.h"
-#include "c_repos_GUI_Design_Project.h"
+#include "ui.h"
 
 /*********************
  *      DEFINES
  *********************/
+
+
 
 /**********************
  *      TYPEDEFS
@@ -47,13 +48,14 @@ lv_obj_t * checkbox_create(lv_obj_t * parent, const char * text, lv_subject_t * 
     }
 
     lv_obj_t * lv_checkbox_0 = lv_checkbox_create(parent);
-    lv_obj_set_name_static(lv_checkbox_0, "checkbox_#");
     lv_obj_bind_checked(lv_checkbox_0, subject);
     lv_checkbox_set_text(lv_checkbox_0, text);
-
     lv_obj_add_style(lv_checkbox_0, &box, LV_PART_INDICATOR | LV_STATE_PRESSED);
 
+
     LV_TRACE_OBJ_CREATE("finished");
+
+    lv_obj_set_name(lv_checkbox_0, "checkbox_#");
 
     return lv_checkbox_0;
 }
@@ -61,4 +63,3 @@ lv_obj_t * checkbox_create(lv_obj_t * parent, const char * text, lv_subject_t * 
 /**********************
  *   STATIC FUNCTIONS
  **********************/
-

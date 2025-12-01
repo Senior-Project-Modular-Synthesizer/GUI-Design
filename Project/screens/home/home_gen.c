@@ -1,18 +1,19 @@
 /**
  * @file home_gen.c
- * @brief Template source file for LVGL objects
+ * @description Template source file for LVGL objects
  */
 
 /*********************
  *      INCLUDES
  *********************/
-
 #include "home_gen.h"
-#include "c_repos_GUI_Design_Project.h"
+#include "ui.h"
 
 /*********************
  *      DEFINES
  *********************/
+
+
 
 /**********************
  *      TYPEDEFS
@@ -45,13 +46,15 @@ lv_obj_t * home_create(void)
         style_inited = true;
     }
 
-    if (home == NULL) home = lv_obj_create(NULL);
-    lv_obj_t * lv_obj_0 = home;
-    lv_obj_set_name_static(lv_obj_0, "home_#");
+    lv_obj_t * lv_obj_0 = lv_obj_create(NULL);
 
     lv_obj_t * lv_buttonmatrix_0 = lv_buttonmatrix_create(lv_obj_0);
 
+
+
     LV_TRACE_OBJ_CREATE("finished");
+
+    lv_obj_set_name(lv_obj_0, "home");
 
     return lv_obj_0;
 }
@@ -59,4 +62,3 @@ lv_obj_t * home_create(void)
 /**********************
  *   STATIC FUNCTIONS
  **********************/
-
