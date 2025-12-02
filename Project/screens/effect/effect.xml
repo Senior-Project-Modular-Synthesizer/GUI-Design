@@ -7,8 +7,8 @@
             <effectslider title="GAIN" variable="arc1"></effectslider>
         </column>
 
-        <lv_button style_align="bottom_mid" style_text_font="font_subtitle" align="top_right">
-            <lv_label text="Back"/>
+        <lv_button height="30" style_text_font="font_title" align="top_right">
+            <lv_label text="Back" align="center"/>
             <screen_load_event screen="home"/> 
         </lv_button>
         <arc align="bottom_left" ></arc>

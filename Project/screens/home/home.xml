@@ -4,12 +4,7 @@
     </styles>
 
     <view>
-        <!-- <lv_table column_count="1" row_count="2" style_border_side="full">
-            <style name="cell"/>
-            <lv_table-cell row="0" column="0" value="1"> 
-            </lv_table-cell>
-        </lv_table> -->
-        <lv_buttonmatrix >
+        <lv_buttonmatrix>
 
         </lv_buttonmatrix>
     </view>

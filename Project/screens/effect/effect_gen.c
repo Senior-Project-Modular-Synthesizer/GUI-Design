@@ -65,12 +65,13 @@ lv_obj_t * effect_create(void)
 
 
     lv_obj_t * lv_button_0 = lv_button_create(lv_obj_0);
-    lv_obj_set_style_align(lv_button_0, LV_ALIGN_BOTTOM_MID, 0);
-    lv_obj_set_style_text_font(lv_button_0, font_subtitle, 0);
+    lv_obj_set_height(lv_button_0, 30);
+    lv_obj_set_style_text_font(lv_button_0, font_title, 0);
     lv_obj_set_align(lv_button_0, LV_ALIGN_TOP_RIGHT);
 
     lv_obj_t * lv_label_0 = lv_label_create(lv_button_0);
     lv_label_set_text(lv_label_0, "Back");
+    lv_obj_set_align(lv_label_0, LV_ALIGN_CENTER);
 
     lv_obj_add_screen_load_event(lv_button_0, LV_EVENT_CLICKED, home, LV_SCREEN_LOAD_ANIM_NONE, 0, 0);
 

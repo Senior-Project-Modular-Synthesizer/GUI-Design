@@ -12,14 +12,14 @@
         <style name="slider" 
             bg_opa="0" border_width="0"
             width="content" height="60"
-            flex_flow="column"
+            flex_flow="column" text_font="font_title"
             />
     </styles>
 
     <view scrollable="false">
         <style name="slider"/>
-        <lv_label align="center" text="$title" style_pad_bottom="50"></lv_label>
-        <lv_slider bind_value="$variable" width="200" align="center">
+        <lv_label align="center" text="$title" style_pad_bottom="45"></lv_label>
+        <lv_slider bind_value="$variable" width="150" align="center">
             <event_cb callback="arc_changed" trigger="value_changed"/>
         </lv_slider>
         <lv_label align="center" bind_text="$variable" style_pad_top="45"></lv_label>
